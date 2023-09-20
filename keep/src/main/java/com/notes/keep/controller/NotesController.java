@@ -17,7 +17,7 @@ public class NotesController {
     @PostMapping("/add")
     public ResponseEntity<?> createNote(@RequestBody Notes note) {
         Loggers.info("CALLED CREATE NOTES");
-        Loggers.info(note.toString());
+        System.out.println(note);
         return ResponseEntity.ok(notesService.createNote(note));
     }
 

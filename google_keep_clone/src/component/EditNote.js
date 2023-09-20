@@ -1,6 +1,3 @@
-import { useEffect, useState } from 'react';
-
-
 export const getById = async (id) => {
     const url = `notes/getNote/${id}`;
 
