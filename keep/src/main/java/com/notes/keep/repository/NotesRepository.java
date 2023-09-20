@@ -8,9 +8,7 @@ import java.util.List;
 
 @Repository
 public interface NotesRepository extends JpaRepository<Notes, Integer> {
-    List<Notes> findByTitle(String title);
-
-    List<Notes> findByUserId(Integer id);
+    Notes findByNoteId(Integer id);
 
 }
 

@@ -8,7 +8,6 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
-import org.hibernate.annotations.NotFound;
 
 import java.util.Date;
 
@@ -20,8 +19,8 @@ import java.util.Date;
 public class Notes {
     private Integer userId;
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    private Integer id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer noteId;
     private String title;
     private String description;
     private boolean completed;

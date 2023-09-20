@@ -1,9 +1,9 @@
-import React from 'react'
+import { useEffect, useState } from 'react';
 
 
-const getData = async () => {
-    // const url = 'https://jsonplaceholder.typicode.com/todos';
-    const url = `notes/getById/${id}`;
+export const getById = async (id) => {
+    const url = `notes/getNote/${id}`;
+
 
     try {
         const response = await fetch(url);
@@ -30,11 +30,20 @@ const getData = async () => {
     }
 };
 
-export default function EditNote() {
 
-    return (
-        <div>
+export default function EditNote(props) {
+    // const [noteData, setNoteData] = useState(null);
 
-        </div>
-    )
+    // useEffect(() => {
+    //     getData(props.id)
+    //         .then((data) => {
+    //             setNoteData(data);
+    //         })
+    //         .catch((error) => {
+    //             console.error('Error fetching data:', error);
+    //         });
+    // }, [props.id]);
+
+    // console.log(noteData);
+    // return noteData || {};
 }
